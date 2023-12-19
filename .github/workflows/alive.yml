@@ -10,7 +10,7 @@ jobs:
     name: Update this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: gohomo/login_serv@v3
+      - uses: gohomo/login_serv
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
       - uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
