@@ -1,15 +1,16 @@
-name: Github Action with a cronjob trigger
+name: My awesome readme
 on:
+  workflow_dispatch:
   schedule:
+    # Runs at 12 am UTC
     - cron: "0 0 * * *"
 
 jobs:
-  cronjob-based-github-action:
-    name: Cronjob based github action
+  update-readme:
+    name: Update this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: gohomo/login_serv@v1
-      # - step1
-      # - step 2
-      # - step n, use it as the last step
+      - uses: gohomo/login_serv@v3
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
       - uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
