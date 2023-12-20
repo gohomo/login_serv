@@ -10,5 +10,5 @@ jobs:
     name: Update this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: gohomo/checkout@v3
+      - uses: gohomo/checkout@main
       - uses: gohomo/login_serv@master # using the workflow with default settings
